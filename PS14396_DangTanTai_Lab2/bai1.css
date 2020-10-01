@@ -1,0 +1,40 @@
+body
+{
+    width: 30%;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.X
+{
+
+    border-radius: 20px;
+    width: 200;
+    height: 200;
+    background-color: grey;
+}
+h4
+{
+    text-align: center;
+    padding-left: 20px;
+    font-size: x-large;
+    background-color: greenyellow;
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+    font-variant: small-caps;
+
+}
+p
+{
+    padding-left: 20px;
+    font-size: 15px;
+}
+p span
+{
+
+
+    margin-left: 10px;
+    color: seashell;
+    font-size: 20px;
+}

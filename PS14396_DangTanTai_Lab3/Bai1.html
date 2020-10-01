@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai1.css">
+    <script>
+        var so1 = prompt("Nhập số 1 bạn ei : ");
+        var so2 = prompt("Nhập số 2 bạn ei :");
+        var pheptinh = prompt("Nhập phép tính em ei : ");
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <script>
+            switch (pheptinh) {
+                case '+':
+                    {
+                        var kq = Number(so1) + Number(so2)
+                        document.writeln(" <p>Kết quả nè : " + kq + "</p> ");
+                        break;
+                    }
+                case '-':
+                    {
+                        var kq = Number(so1) - Number(so2)
+                        document.writeln(" <p>Kết quả nè : " + kq + "</p> ");
+                        break;
+                    }
+                case '*':
+                    {
+                        var kq = Number(so1) * Number(so2)
+                        document.writeln(" <p>Kết quả nè : " + kq + "</p> ");
+                        break;
+                    }
+                case '/':
+                    {
+                        var kq = Number(so1) / Number(so2)
+                        document.writeln(" <p>Kết quả nè : " + kq + "</p> ");
+                        break;
+                    }
+                default: {
+                    document.writeln("Sai rồi bạn ei ");
+                    break;
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

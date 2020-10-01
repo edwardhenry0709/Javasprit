@@ -1,0 +1,38 @@
+.container
+{
+width: 500px;
+height: 200px;
+border: 2px red;
+background-color: #696969;
+margin: auto;
+margin-top: 20px;
+}
+h2
+{
+background-color: #018a8a;
+color: white;
+margin: auto;
+padding: 10px;
+font-size: 35px;
+}
+#kq
+{
+color: #bde770;
+font-size: 30px;
+}
+body
+{
+    text-align: center;
+}
+#pt
+{
+color: #d2933f;
+font-size: 32px;
+}
+#nut>button
+{
+color: white;
+background-color: #758a96;
+margin: 25px;
+font-size: 15px;
+}

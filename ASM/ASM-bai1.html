@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="ASM-bai1.css">
+    <script src="ASM-bai1.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>GIẢI PHƯƠNG TRÌNH BẬC 2</h2>
+        <p id="sl">Số lần giải: <span id="solan">0</span></p>
+        <hr>
+        <div id="pt">Phương trình <span id="ptr"></span> </div>
+        <center>
+            <form>
+                <label for="a">Nhập số a:</label>
+                <input type="number" id="a" onkeydown="moKhoa()"><br>
+                <label for="b">Nhập số b:</label>
+                <input type="number" id="b" onkeydown="moKhoa()"><br>
+                <label for="c">Nhập số c:</label>
+                <input type="number" id="c" onkeydown="moKhoa()"><br>
+            </form>
+        </center>
+        <div class="nut">
+            <button id="giai" onclick="ptb2.giai()">Giải PT</button>
+            <button onclick="ngauNhien()">Ngẫu nhiên</button>
+        </div>
+        <div id="kq">Kết quả</div>
+        <p id="thoigian" onclick="startstopDH()">Hôm nay là: <span id="ngay"></span></p>
+        <p id="thoigian" onclick="startstopDH()">Và bây giờ là: <span id="gio"></span> </p>
+    </div>
+</body>
+
+</html>

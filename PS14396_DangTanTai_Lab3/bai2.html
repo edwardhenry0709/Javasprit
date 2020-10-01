@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai2.css">
+    <script>
+        var fo = prompt("Nhập số thứ 1 bạn ei : ");
+        var f1 = prompt("Nhập tiếp số thứ 2 bạn ei : ");
+        if (isNaN(fo) || isNaN(f1)) {
+            fo = 1;
+            f1 = 1;
+        } else {
+
+        }
+    </script>
+</head>
+<style>
+    center {
+        font-size: 40px;
+        color: brown;
+    }
+</style>
+
+<body>
+    <center>
+        Dãy số fibonacy
+    </center>
+    <div class="container">
+        <script>
+            for (var i = 0; i < 16; i++) {
+                var f = Number(fo) + Number(f1)
+                fo = f1;
+                f1 = f;
+                document.write(" <span>" + f + "</span>");
+            }
+        </script>
+    </div>
+</body>
+
+</html>

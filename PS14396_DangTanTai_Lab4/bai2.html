@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hoTen=null,diem=null,hocLuc=null;
+var sv=new Object();
+sv.hoTen=prompt("Họ Và Tên : ");
+sv.diem=prompt("Điểm : ");
+sv.hienThi=function()
+{
+if(this.diem>=5)
+this.hocLuc="Đậu";
+else this.hocLuc="Rớt";
+document.getElementById("kq").innerHTML="<p>Họ Và Tên : "+this.hoTen+"</p>";
+document.getElementById("kq").innerHTML+="<p>Điểm : "+this.diem+"</p>";
+document.getElementById("kq").innerHTML+="<p>Học lực : "+this.hocLuc+"</p>";
+}
+    </script>
+    <style>
+
+        .container
+        {
+            width: 500px;
+            height: auto;
+            border: 2px red;
+            background-color: #696969;
+            margin: auto;
+            margin-top: 20px;
+        }
+        h2
+    {
+    background-color: #018a8a;
+    color: white;
+    margin: auto;
+    padding: 10px;
+    font-size: 35px;
+    text-align: center;
+    }
+    #kq
+    {
+        padding-left: 20px;
+        font-size: 15px;
+        display: inline-block;
+    width:300px;
+    color: #bde770;
+    font-weight: bolder;
+    }
+    button
+    {
+    color: white;
+    background-color: #758a96;
+    margin: 25px;
+    font-size: 15px;
+    }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>Thông Tin Sinh Viên</h2>
+    <div id="kq"></div>
+    <button onclick="sv.hienThi();">HIỂN THỊ</button>
+</div>
+</body>
+</html>

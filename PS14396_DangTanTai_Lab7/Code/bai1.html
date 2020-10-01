@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <link rel="stylesheet" href="../CSS/bai1.css">
+</head>
+<style>
+    #check
+    {
+        color: aliceblue;
+
+    }
+</style>
+<body ng-app="b1">
+<div class="x"  ng-controller="hienthi">
+<div class="y">
+<marquee behavior="" direction=""><h3 id="check">Thông tin sinh viên</h3></marquee>
+<center><img src="../hinh/{{photo}}" alt="" srcset="" width="390px" height="350px"></center>
+<ul>
+    <li>
+        <span>Họ tên :</span> {{hoten}}
+    </li>
+    <li>
+        <span>Ngày Sinh :</span> {{ngaysinh}}
+    </li>
+    <li>
+        <span>Giới tinh :</span> {{gender}}
+    </li>
+    <li>
+        <span>Điểm :</span> {{mark}}
+    </li>
+</ul>
+</div>
+</div>
+<script>
+    app= angular.module("b1",[]);
+    app.controller("hienthi",xuly);
+    function xuly($scope){
+        $scope.hoten="Tài Handsome";
+        $scope.ngaysinh="07/09/2001";
+        $scope.gender="Male";
+        $scope.photo="../hinh/conroy.jpg";
+        $scope.mark="90";
+
+    }
+
+</script>
+</body>
+</html>

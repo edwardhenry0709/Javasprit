@@ -1,0 +1,34 @@
+.abc
+{
+    background-color: blanchedalmond;
+    color: black;
+    width: 600px;
+    height: auto;
+    border: red solid 3px;
+    font-size: 20px;
+    padding: 3px;
+}
+.xyz
+{
+    background-color: white;
+    color: black;
+    width: auto;
+    height: auto;
+    border: 3px ridge red;
+    font-size: 20px;
+    padding: 3px;
+}
+.x
+{
+    border: 3px red solid;
+    color: black;
+    background-color: coral;
+    text-align: center;
+    font-size: 30px;
+}
+button
+{
+    width: 80px;
+    background-color: aquamarine;
+    color: black;
+}

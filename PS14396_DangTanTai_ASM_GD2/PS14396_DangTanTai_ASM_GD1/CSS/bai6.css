@@ -1,0 +1,22 @@
+.x
+{
+    text-align: center;
+    margin: auto;
+}
+h1
+{
+    font-size: 40px;
+    box-shadow: 5px 5px 5px orange;
+    border: 5px solid;
+    font-weight: bold;
+    color: wheat;
+}
+span b
+{
+    font-size: 30px;
+    color: chartreuse;
+}
+body
+{
+    background-color: black;
+}

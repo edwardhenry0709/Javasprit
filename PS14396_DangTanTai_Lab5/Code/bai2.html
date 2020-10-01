@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bai2.css">
+    <script src="../JS/bai2.js"></script>
+</head>
+<body>
+<div class="x">
+    <table>
+        <caption>Các sản phẩm hoa</caption>
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="chonhet"></th>
+                <th>Tên sản phẩm hoa</th>
+                <th>Giá</th>
+                <th>Mua</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" class="chon"  onchange="daotao(this);"  checked></td>
+                <td>Hạnh phúc trọn vẹn</td>
+                <td>9000000</td>
+                <td><button onclick="them(this)">Chọn</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="chon"  onchange="daotao(this);"  checked></td>
+                <td>Con đường thành công</td>
+                <td>17500000</td>
+                <td><button onclick="them(this)">Chọn</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="chon" onchange="daotao(this);"  checked></td>
+                <td>Phú quý</td>
+                <td>13000000</td>
+                <td><button onclick="them(this)">Chọn</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="chon" onchange="daotao(this);"  checked></td>
+                <td>Vững bước</td>
+                <td>1150000</td>
+                <td><button onclick="them(this)">Chọn</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="chon"  onchange="daotao(this);"  checked></td>
+                <td>Một cõi đi dề</td>
+                <td>950000</td>
+                <td><button onclick="them(this)">Chọn</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr style="margin: 20px 0"/>
+    <table id="cart"><caption>Giỏ hàng của bạn</caption></table>
+    <h3>Tổng Số Tiền : <span id="tong">0</span></h3>
+</div>
+</body>
+</html>

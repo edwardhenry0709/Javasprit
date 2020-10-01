@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/bai2.css">
+    <script>
+
+        function hienthi(v){
+            vc=document.getElementById("vc");
+            vc.style.display =(v==true)? "":"none";
+        }
+        function kiemtra() {
+            var thongbao,thanhcong;
+            thanhcong=true;
+            thongbao="";
+            var sp=document.getElementById("tensp");
+            if(sp.value.length==0){alert("Nhập lại coi thằng kia");thanhcong=false;}
+            if (thongbao == " ") thongbao=alert("Nhập tên đúng rồi nè");
+            var gia=document.getElementById("gia");
+            if(gia.value==""){alert("Chưa nhập giá ");thanhcong=false;}
+            if(isNaN(gia.value)==true){alert("Số tiền là số chứ ko phải nhập chữ") ;thanhcong=false;}
+            if(parseInt(gia.value)<=0){alert("SỐ tiền phải lớn hơn 0");thanhcong=false;}
+            var r=document.getElementsByName('diachi');
+            if(r[0].checked==false && !r[1].checked==false){alert("Vui lòng chọn nơi giao hàng");thanhcong=false;}
+            document.getElementById("kq").innerHTML = thongbao;
+            return thanhcong;
+        }
+    </script>
+</head>
+
+<body background="../Image/windows-10-abstract-4k-1j.jpg">
+    <form>
+        <p> <label>Sản phẩm</label> <input id="tensp" placeholder="Nhập tên sản phẩm" required/> </p>
+        <p> <label>Loại</label>
+            <select id="loai" required>
+                <option value="">Chọn loại sản phẩm</option>
+                <option value="DT">Điện thoại</option>
+                <option value="MT">Máy tính</option>
+            </select>
+        </p>
+        <p> <label>Đơn giá</label> <input id="gia" placeholder="Nhập đơn giá" required/> </p>
+        <p> <label>Nơi nhận hàng</label>
+            <input type="radio" name="diachi" onclick="hienthi(false)" required>Nội thành
+            <input type="radio" name="diachi" onclick="hienthi(true)" required>Ngoại thành
+        </p>
+        <div id="kq"></div>
+        <p id="vc"><label>Phí vận chuyển</label> <input id="phi_vc" value="100000" required></p>
+        <p> <label></label> <button type="submit" onclick="kiemtra()">Đặt mua</button></p>
+    </form>
+
+</body>
+
+</html>

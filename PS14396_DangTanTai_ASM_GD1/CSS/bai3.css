@@ -1,0 +1,81 @@
+*{margin: auto;}
+.x
+{
+text-align: center;
+color: white;
+}
+body
+{
+    background-image: url(../hinh/nature.jpg);
+    transition: ease 3s;
+}
+select
+{
+    color: black;
+    background-color: aqua;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+}
+th
+{
+    font-size: 30px;
+    transition: ease-in-out 3s;
+}
+input
+{
+    width:100px ;
+    height: 30px;
+    transition: ease-in-out 3s;
+}
+td
+{
+    font-weight: bold;
+    font-size: 30px;
+    transition: ease-in-out 3s;
+}
+table
+{
+    background-image: url(../hinh/5.jpg);
+
+    box-shadow: 15px 10px 5px orangered;
+    color: azure;
+    width: 900px;
+    border-radius: 20px;
+}
+table:hover
+{
+    transition: ease 2s;
+    width: 800px;
+}
+table:checked
+{
+    transition: ease 2s;
+    width: 900px;
+}
+input:disabled
+{
+opacity: 35%;
+}
+input:hover
+{
+    opacity: 0%;
+}
+
+h2:hover
+{
+    color: black;
+    background-color: white;
+}
+h1
+{
+    font-size: 80px;
+}
+h1:hover
+{
+    transition-property: inherit;
+}
+select
+{
+    width: 170px;
+}

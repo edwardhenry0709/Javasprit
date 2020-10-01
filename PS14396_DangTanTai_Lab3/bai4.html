@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai4.css">
+
+</head>
+<style>
+    #wrapper {
+        width: 500px;
+        margin: auto;
+        height: auto;
+        background-color: darkturquoise;
+        margin-top: 100px;
+        padding: 10px;
+    }
+
+    .bao {
+        width: calc(100% - 4px);
+        height: 80px;
+        border: 2px dotted white;
+    }
+
+    .box33 {
+        width: calc(100% / 3);
+        float: left;
+    }
+
+    h1 {
+        font-size: 25px;
+        color: white;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    select {
+        margin: auto;
+        display: block;
+        width: 80px;
+        height: 25px;
+    }
+
+    .clr {
+        clear: both;
+    }
+</style>
+
+<body>
+    <div id="wrapper">
+        <div class="bao">
+            <div class="box33">
+                <h1>Ngày</h1>
+                <select name="ngay" id="ngay">
+                    <script>
+                        for (var i = 1; i <= 31; i++) {
+
+                            if (i == null)
+                                document.write("<option value=" + i + " selected >" + i + "</option>");
+                            else
+                                document.write("<option value=" + i + ">" + i + "</option>");
+                        }
+                    </script>
+                </select>
+            </div>
+            <div class="box33">
+                <h1>Tháng</h1>
+                <select name="thang" id="thang">
+                    <script>
+                        for (var i = 1; i < 13; i++) {
+                            document.write("<option>" + i + "</option>");
+                        }
+                    </script>
+                </select>
+            </div>
+            <div class="box33">
+                <h1>Năm</h1>
+                <select name="nam" id="nam">
+                    <script>
+                        var y = new Date().getFullYear();
+
+                        for (var i = 1970; i <= y; i++) {
+                            document.write("<option>" + i + "</option>");
+                        }
+                    </script>
+                </select>
+            </div>
+        </div>
+        <div class="clr"></div>
+    </div>
+</body>
+
+</html>

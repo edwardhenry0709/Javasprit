@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+<script>
+    var hoTen="Conroy Đặng";
+    var mssv="PS14396"
+    var born="07/09/2001"
+</script>
+</head>
+<body>
+<h1>Thông tin cá nhân</h1>
+<p><span>Họ tên : <b id="hoTen">
+    <script>document.write(hoTen);</script>
+</b></span></p>
+<p><span>Mã SV :  <b id="mssv">
+    <script>document.write(mssv);</script>
+</b></span></p>
+<p><span>Ngày Sinh :  <b id="born">
+</b></span></p>
+<script>
+document.getElementById("born").innerHTML=born;
+</script>
+</body>
+</html>

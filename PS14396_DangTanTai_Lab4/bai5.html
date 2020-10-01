@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fover() {
+            var h = document.getElementById("img");
+            h.src = "hinh/Tài đẹp trai.jpg";
+        }
+        function fout() {
+            var h = document.getElementById("img");
+            h.src = "hinh/Hi.jpg";
+        }
+    </script>
+</head>
+<style>
+    * {
+        margin: auto;
+    }
+
+    button {
+        text-align: center;
+        background-color: wheat;
+        color: red;
+        font-size: 19px;
+        width: 30%;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    .l {
+
+        border: 3px red solid;
+        background-color: black;
+
+    }
+</style>
+
+<body>
+    <div class="l">
+        <img src="/PS14396_DangTanTai_Lab4/hinh/Hi.jpg" alt="" id="img" onmouseover="fout();" onmouseout="fover();"
+            width="1280px" height="720px"> <br>
+        <button onclick="fover()">Chuyển qua hình 2 nè ! </button> <br>
+        <br> <button onclick="fout();">Chuyển lại hình 1 nè !</button>
+    </div>
+</body>
+
+</html>

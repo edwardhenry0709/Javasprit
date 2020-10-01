@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../CSS/bai4.css">
+    <script>
+        var loi="";
+        function check1()
+        {
+            var count=0,arrst;
+            arrst=document.getElementById("st");
+
+            for(var i=0;i<=arrst.length;i++)
+           {
+               if(arrst[i].checked==true)
+               {
+                   count++;
+               }
+               if(count==0)
+               {
+                   loi+="Chưa chọn ";
+               }
+           }
+           document.getElementById("loi").innerHTML=loi;
+        }
+        function check()
+        {
+            var count=0;
+            var hoten = document.from.hoten.value;
+            var email = document.from.email.value;
+            var ma = document.from.masv.value;
+            var loi = "";
+            var note = document.from.note.value;
+            var sex = document.from.sex.value;
+            var quoctich=document.from.quoctich.value;
+            var arrst=document.getElementsByName("st");
+            if (hoten.length == "") {
+                loi+="Nhập họ tên bạn ei ! ko đc để trống <br>";
+            } else if (hoten.length < 3 || hoten.length > 30) {
+
+                loi+="Họ tên nhập từ 3->30 kí tự nha ! <br>";
+            }
+            if(ma.length=="")
+            {
+                loi+="Bạn chưa nhập mã SV <br>";
+            }
+            if(email=="")
+            {
+                loi+="Ko đc để trống email bạn ơi ! <br>";
+            }
+            if(quoctich==0)
+            {
+                loi+="Chưa chọn quốc tịch";
+            }
+            if(sex =null)
+            {
+                loi+="Chưa chọn giới tính <br>"
+            }
+            if(note.length>201)
+            {
+                loi+="Nghi chú phải ít hơn 201 kí tự <br>"
+            }
+            document.getElementById("loi").innerHTML=loi;
+            return false;
+        }
+        function checkmail()
+        {
+            var email = document.getElementById('email');
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!filter.test(email.value)) {
+                     alert('Hay nhap dia chi email hop le.\nExample@gmail.com');
+                     email.focus;
+                     return false;
+            }
+            else{
+                     alert('OK roi day, Email nay hop le.');
+            }
+        }
+    </script>
+</head>
+<style>
+    h1
+    {
+        color: white;
+        box-shadow: 3px 3px 5px orangered;
+    }
+</style>
+<style>
+</style>
+<body background="../hinh/5.jpg" >
+    <form name="from" id="x">
+
+        <div id="wrapper" style="margin: 10px auto;">
+           <center> <marquee behavior="" direction=""><h1>Đăng kí thành viên---Đăng kí thành viên</h1></marquee></center>
+            <form action="">
+                <div class="form-group">
+                    <label for="">Họ Và Tên:</label>
+                    <input type="text" name="hoten" placeholder="None" class="f-ctrl" autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="">Mã Sinh Viên:</label>
+                    <input type="text" id="masv" placeholder="None" class="f-ctrl" autofocus>
+                </div>
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Giới tính:</legend>
+                        <label for="gdr-nam"><input required name="sex" type="radio" id="gdr-nam" name="gender" checked >Nam</label>
+                        <label for="gdr-nu"><input required name="sex" type="radio" id="gdr-nu" name="gender">Nữ</label>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <label for="">Ngày sinh:</label>
+                    <input type="date" class="f-ctrl" required value="">
+                </div>
+                <div class="form-group">
+                    <label for="">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Example@mail.com" class="f-ctrl" onclick="checkmail()" autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="">Quốc Tịch:</label>
+                    <select  name="quoctich">
+                        <option value="0">Chọn quốc tịch</option>
+                        <option value="1">Việt Nam</option>
+                        <option value="2">Anh Quốc</option>
+                        <option value="3">Nhật Bản</option>
+                        <option value="4">Đài Loan</option>
+                        <option value="5">Canada</option>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <fieldset name="st" onclick="check1()">
+                        <h1>Hobbies :</h1>
+                        <input required id="st" type="checkbox"  value="1"  >Code</>
+                        <input required id="st" type="checkbox"  value="2" >Du lịch</>
+                        <input  required id="st" type="checkbox"  value="3" >Đọc sách</>
+                        <input required id="st" type="checkbox"  value="4 ">Sống ở nước ngoài</>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <label for="">Ghi chú:</label>
+                    <textarea name="note" id="" cols="30" rows="5" class="f-ctrl"></textarea>
+                </div>
+                <div class="form-group" id="btn-zone">
+                    <div id="loi"></div>
+                    <button class="f-btn" onclick="check()" type="submit">Đăng ký</button>
+                    <button class="f-btn" type="reset">Nhập lại</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

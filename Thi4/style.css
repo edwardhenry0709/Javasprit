@@ -1,0 +1,36 @@
+body{background: url('bg.jpg') no-repeat;}
+#form1{
+    box-shadow: 0px 0px 80px lightslategrey;
+    border-radius: 5px;
+    padding: 10px 40px;
+    background-color: whitesmoke;
+    margin: 60px auto;
+    max-width: 400px;
+    line-height: 30px;
+}
+input  {
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px lightslategrey;
+    padding-left: 20px;
+}
+fieldset {
+    border-radius: 5px;
+    border: solid 1px lightslategrey;
+    width: 372px;
+}
+#btndangky{
+    margin: 0px auto;
+    width: 160px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: royalblue;
+    color: white;
+}
+.x
+{
+color: wheat;
+font-size: 40px;
+}

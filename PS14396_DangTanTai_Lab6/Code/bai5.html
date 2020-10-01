@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/bai5.js"></script>
+</head>
+<style>
+    form
+    {
+        width: 600px;
+        height: auto;
+        border: 3px red solid;
+        margin: auto;
+        padding: 3px;
+    }
+    h2{
+        background-color: black;
+        color: wheat;
+        margin: auto;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    input
+    {
+        font-size: 25px;
+        background-color: floralwhite;
+    }
+input:focus
+{
+    font-size: 35px;
+    text-align: center;
+    padding-left: -20px;
+    transition: ease 3s;
+    width: 300px;
+}
+button:focus
+{
+    transition: ease 2s;
+    width: 80px;
+}
+</style>
+<body onload="ngaunhien();">
+    <form>
+        <h2>Học toán để giàu nào bé</h2>
+        <p>
+
+            <input type="text" name="a" id="a">
+        </p>
+        <p id="pheptinh">+</p>
+        <p>
+
+            <input type="text" name="b" id="b">
+        </p>
+        <hr>
+        <p>
+
+            <input type="text" name="kq" id="kq"><br>
+        </p>
+        <div id="thongbao"></div>
+        <div id="thongbao2"></div>
+        <p>
+        <button type="button" onclick="check()">Giải nào</button>
+        </p>
+    </form>
+</body>
+</html>

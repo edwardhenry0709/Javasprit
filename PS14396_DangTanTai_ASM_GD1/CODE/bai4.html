@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../CSS/bai4.css">
+    <script>
+        var loi;
+        function checkmail()
+        {
+            var email = document.getElementById('email');
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!filter.test(email.value)) {
+                     alert('Hay nhap dia chi email hop le.\nExample@gmail.com');
+                     email.focus;
+                     return false;
+            }
+            else{
+                     alert('OK roi day, Email nay hop le.');
+            }
+        }
+        function checkName()
+        {
+            var hoTen=document.from.hoTen.value;
+            if(hoTen.length<3 || hoTen.length>30 || hoTen=="")
+                {
+                    loi+="Chưa nhập họ tên kìa bạn ơi và kí tự nằm trong khoảng từ 3 đến 30 nhé !"
+                }
+                if(loi.length>0) {document.getElementById("loi").innerHTML=loi;}
+                return false;
+        }
+
+
+    </script>
+</head>
+<style>
+</style>
+<body background="../hinh/banner.jpg" >
+<div id="wrapper" style="margin: 10px auto;" name="from">
+    <aside>
+<img src="../hinh/content.jpg" alt="">
+    </aside>
+    <article>
+        <div id="wrapper" style="margin: 10px auto;">
+
+            <div class="form-group">
+                <label for="">Họ Và Tên:</label>
+                <input  onsubmit="checkName()" type="text" name="hoten" placeholder="None" class="f-ctrl" autofocus>
+                <div id="loi"></div>
+            </div>
+            <div class="form-group">
+                <label for="">Mã Sinh Viên:</label>
+                <input type="text" name="ma" placeholder="None" class="f-ctrl" autofocus>
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <legend>Giới tính:</legend>
+                    <label for="gdr-nam"><input required name="sex" type="radio" id="gdr-nam" name="gender" checked>Nam</label>
+                    <label for="gdr-nu"><input required name="sex" type="radio" id="gdr-nu" name="gender">Nữ</label>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <label for="">Ngày sinh:</label>
+                <input type="date" class="f-ctrl" required value="">
+            </div>
+            <div class="form-group">
+                <label for="">Email:</label>
+                <input type="email" name="email" required placeholder="Example@mail.com" class="f-ctrl" autofocus id="email" oncontextmenu="checkmail()"  required>
+            </div>
+            <div class="form-group">
+                <label for="">Quốc Tịch:</label>
+                <input name="quoctich" list="jobs" class="f-ctrl" required >
+                <datalist id="jobs">
+                    <option value="Việt Nam"></option>
+                    <option value="Mỹ"></option>
+                    <option value="Anh"></option>
+                    <option value="Úc"></option>
+                    <option value="Nhật Bản"></option>
+                    <option value="Canada"></option>
+                </datalist>
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <legend>Hobbies :</legend>
+                    <label for="st1"><input  name="soThich" type="checkbox" id="st1">Code</label>
+                    <label for="st2"><input  name="soThich" type="checkbox" id="st2">Du lịch</label>
+                    <label for="st3"><input   name="soThich" type="checkbox" id="st3">Đọc sách</label>
+                    <label for="st4"><input  name="soThich" type="checkbox" id="st4">Sống ở nước ngoài</label>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <label for="">Ghi chú:</label>
+                <textarea name="note" id="" cols="30" rows="5" class="f-ctrl"></textarea>
+            </div>
+            <div class="form-group" id="btn-zone">
+                <div id="loi"></div>
+                <button class="f-btn" onclick="check()" type="submit">Đăng ký</button>
+                <button class="f-btn" type="reset">Nhập lại</button>
+            </div>
+    </div>
+    </div>
+    </article>
+</div>
+</body>
+</html>

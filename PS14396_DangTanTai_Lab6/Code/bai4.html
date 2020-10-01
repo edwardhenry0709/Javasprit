@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+    <script src="../JS/checksearch.js"></script>
+</head>
+<style>
+ *{margin: auto;}
+ form
+ {
+
+     border: 3px red solid;
+     margin-top: 150px;
+     margin: 200px;
+     border-radius: 90px;
+ }
+ form>img
+ {
+    padding-left: 300px;
+ }
+#x
+{
+    text-align: center;
+
+}
+input
+{
+    font-size: 40px;
+    border-radius: 30px;
+    background-image: url(../Image/windows-10-abstract-4k-1j.jpg);
+    color: wheat;
+    box-shadow: 5px 5px 2px orangered inset;
+}
+input:focus
+{
+    background-color: black;
+    color: gold;
+    font-size: 40px;
+}
+
+</style>
+<body>
+
+    <form action="wwww.google.com" name="formtim" method="get" onsubmit="return checksearch()">
+        <img src="../Image/google.gif" alt="" srcset="">
+        <div id="x">
+            <input type="text" onclick="if(this.value=='Tìm kiếm') this.value=''"
+        onblur="if(this.value=='') this.value='Tìm kiếm'"
+        name="tukhoa" id="tukhoa" value="Tìm kiếm">
+        <input type="submit" value="TÌM" name="btntim" id="btntim" accept="wwww.google.com">
+        </div>
+    </form>
+
+</body>
+</html>

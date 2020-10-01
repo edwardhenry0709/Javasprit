@@ -1,0 +1,80 @@
+*{margin: auto;}
+h1
+{
+color: white;
+transform: skew(x);
+text-align: center;
+font-weight: bolder;
+font-variant-caps: all-petite-caps;
+font-size: 60px;
+}
+.khung
+{
+    border: 5px wheat ;
+    border-radius: 3px;
+    width: 1500px;
+    height: auto;
+    margin: auto;
+    padding: 3px;
+    margin-top: 90px;
+    color: white;
+}
+aside
+{
+    float: left;
+    width: 745px;
+    display: block;
+    height: 400px;
+    position: relative;
+    opacity: 70%;
+
+}
+article
+{
+    float: right;
+    width: 700px;
+    height: 600px;
+    background-color: #202123;
+}
+.khung2
+{
+background-color: #202123;
+color: white;
+border: 3px black;
+border-radius: 2px;
+}
+input
+{
+
+    color: white;
+    background-color: #202123;
+    width: 450px;
+    display: flow-root;
+    font-size: 40px;
+    margin-top: 30px;
+}
+.khung3
+{
+    margin-left: 60px;
+   text-align: center;
+   margin-top: 20px;
+   font-size: 60px;
+
+}
+table
+{
+margin-right: 90px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.from-group
+{    font-size: 20px;
+    display: inline-table;
+    width: 500px;
+    margin-left: -100px;
+}
+.from-group1
+{
+    display: inline;
+}

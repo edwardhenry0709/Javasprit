@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="import" href="thongtin.html">
+    <script>
+        var w;
+    </script>
+    <script>
+        function openWin() {
+            w = window.open("thongtin.html", "tt", "width=400,height=200,top=50,left=600");
+            w.focus();
+        }
+        function dongWin()
+        {
+if(w==null)
+{
+alert("Error");
+
+} w.close();
+w.null;
+        }
+        function diChuyenMotChut()
+        {
+            w.moveBy(100,50);
+            w.focus;
+        }
+        function diChuyenToiDiem()
+        {
+var x,y;
+x=prompt("Nhập tọa độ x = ");
+y=prompt("Nhập tọa độ y = ");
+w.moveTo(x,y);
+w.focus();
+        }
+        function inNe()
+        {
+            w.print();
+        }
+    </script>
+</head>
+<style>
+    button
+    {
+width: 40%;
+background-color: antiquewhite;
+font-size: 20px;
+text-align: center;
+margin: 20px;
+margin-top: 40px;
+padding: 3px;
+    }
+*{
+    margin: auto;
+}
+    .z
+    {
+        width: 600px;
+        height: 500px;
+        border: 1px orange unset ;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        margin-top: 100px;
+
+
+    }
+</style>
+<body>
+  <div class="z">
+    <h1>
+        Thực hành với đối tượng Window
+    </h1>
+    <button onclick="openWin();">Mở win</button> <br>
+    <button onclick="inNe();">In Ấn</button> <br>
+    <button onclick="diChuyenMotChut();">Di chuyển 1 chút</button> <br>
+    <button onclick="diChuyenToiDiem();">Di chuyển tới điểm</button> <br>
+    <button onclick="dongWin();">Đóng win</button> <br>
+  </div>
+</body>
+
+</html>

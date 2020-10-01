@@ -1,0 +1,30 @@
+.x
+{
+border:2px solid black;
+border-radius: 20px;
+width: 400px;
+height: auto;
+background-color: black;
+margin: auto;
+
+margin: 7;
+}
+.y
+{
+    border: 3px solid black;
+    border: 20px;
+
+}
+
+ul li
+{
+    list-style-type: none;
+    width: 160px;
+    color: whitesmoke;
+    display: inline-block;
+}
+h3{
+    text-align: center;
+color: wheat;
+}
+*{margin: auto;}

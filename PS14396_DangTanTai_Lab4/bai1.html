@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bai1.css">
+    <script>
+        var ptb2 = new Object();
+        ptb2.a = null;
+        ptb2.b = null;
+        ptb2.c = null;
+        ptb2.nhap = function () {
+            do {
+                this.a = window.prompt("Nhập a : ");
+                this.b = window.prompt("Nhập b : ");
+                this.c = window.prompt("Nhập c : ");
+            } while (isNaN(this.a, this.b, this.c));
+            str = this.a + "x<sup>2</sup>+" + this.b + "x+" + this.c + "=0";
+            document.getElementById("pt").innerHTML = str;
+        }
+ptb2.giai= function()
+{
+    var delta = this.b*this.b + 4 *this.a*this.c;
+            if (delta<0)
+            {
+                document.getElementById("id").innerHTML="PT Vô Nghiệm" ;
+
+            }
+            else if (delta ==0 )
+            {
+                x1=x2=-this.b/2*this.a;
+               document.getElementById("id").innerHTML="PT vô nguyện";
+            }
+            else
+            {
+                x1=-this.b+Math.pow(delta)/2*this.a;
+                x2=-this.b-Math.pow(delta)/2*this.a;
+                document.write("Phương trình có 2 nghiệm phân biệt");
+                document.getElementById("kq").innerHTML+=x1;
+                document.getElementById("kq").innerHTML+=x2;
+            }
+}
+</script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Giải PTB 2</h2>
+        <div id="pt">
+            Phương trình
+        </div>
+        <div id="kq">
+            Kết quả
+        </div>
+        <div id="nut">
+            <button onclick="ptb2.nhap()">Nhập A B C </button>
+            <button onclick="ptb2.giai()">Giải PT</button>
+        </div>
+    </div>
+</body>
+
+</html>

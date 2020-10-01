@@ -1,0 +1,97 @@
+.container {
+    margin: auto;
+    margin-top: 65px;
+    /* padding: 10px; */
+    width: 500px;
+    padding-bottom: 20px;
+    background-color: rgba(148, 148, 148, 0.562);
+    border: solid;
+    border-radius: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0px;
+    padding: 5px 0px;
+    background-color: rgba(0, 0, 0, 0.836);
+    color: rgb(208, 211, 66);
+    border-radius: 16px;
+}
+
+.container div {
+    text-align: center;
+}
+
+.nut button {
+    height: 50px;
+    width: 150px;
+    margin: 5px;
+    margin-top: 20px;
+    background-color: rgb(158, 117, 110);
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+#pt {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: rgb(88, 37, 138);
+}
+
+#kq {
+    width: 400px;
+    min-height: 100px;
+    margin: auto;
+    margin-top: 10px;
+    padding-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(33, 125, 75);
+    border: snow solid 0.5px;
+    border-radius: 20px;
+    box-shadow: 1px 2px whitesmoke;
+}
+
+input {
+    margin-top: 5px;
+    text-align: center;
+    width: 200px;
+    height: 25px;
+    background-color: rgba(245, 222, 179, 0.612);
+    border: 0.1px solid black;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+    color: black;
+}
+
+#sl {
+    text-align: center;
+}
+
+#solan {
+    font-weight: bold;
+    color: orangered;
+}
+hr{
+    border: solid white 1px;
+}
+#thoigian{
+    text-align: center;
+    font-style: italic;
+}
+#ngay,#gio{
+    font-weight: bold;
+    color: tomato;
+}
+#giai:disabled{
+    background-color: gray;
+}

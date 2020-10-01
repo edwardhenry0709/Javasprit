@@ -1,0 +1,88 @@
+.x
+{
+  margin: auto;
+  width: 30%;
+  height: auto;
+  background-color: #b91d28;
+  color: white;
+  text-align: center;
+  border-radius: 10px ;
+  background-image:url(../hinh/nature.jpg);
+}
+.x1
+{
+    padding: 15px;
+    font-size: 20px;
+    width: 100%;
+}
+.x1:hover
+{
+color: white;
+box-shadow: floralwhite 10px;
+}
+input
+{
+    border-radius: 10px ;
+    color: darkviolet;
+    font-size: 20px;
+    text-align: center;
+}
+input:hover
+{
+    box-shadow: orange 30px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}
+button
+{
+    padding: 19px;
+    margin: 20px;
+    border-radius: 100px;
+    color: white;
+    font-weight: bold;
+    background-color: #20b1aa;
+    width: 100px;
+  height: 100px;
+  background: rgb(255, 0, 76);
+  transition: width 3s;
+}
+button:hover
+{
+background-color: white;
+color: black;
+font-weight: bold;
+font-size: 30px;
+width: 300px;
+}
+#gachNgang{
+    border-bottom: white 2px solid ;
+    border-radius: 10px;
+}
+.hangCuoi
+{
+    border: 3px white solid;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    padding: 90px;
+}
+ .clock{
+    color: yellow;
+}
+h3
+{
+    color: yellow;
+}
+#id
+{
+    font-weight: bold;
+    font-size: 25px;
+}
+#khoa:disabled
+{
+background-color: greenyellow;
+color: black;
+font-weight: 30px;
+cursor: no-drop;
+}

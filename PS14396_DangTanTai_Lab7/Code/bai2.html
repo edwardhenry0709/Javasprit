@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<style>
+    *{margin: auto;}
+.x
+{
+    margin: auto;
+    width: 500px;
+    margin-top: 120px;
+    background-color: black;
+    color: wheat;
+    border-radius: 20px;
+}
+body
+{
+    background-image: url(../hinh/daniel-liang-2018-1-10-26.jpg);
+}
+.form-group>input
+{
+    box-shadow: 5px 5px 3px orange;
+}
+</style>
+<body ng-app="b2">
+    <div ng-controller="hienthi" class="x">
+    <form>
+        <div class="form-group">
+            <label for="">Chiều dài</label>
+            <input type="number" ng-model="dai" class="form-control" name="dai" id="">
+        </div>
+        <div class="form-group">
+            <label for="">Chiều rộng</label>
+            <input type="number" ng-model="rong" class="form-control" name="rong" id="">
+        </div>
+        <div class="form-group">
+            <label for="">Chu vi</label>
+            <span class="form-control">{{chuvi}}</span>
+        </div>
+        <div class="form-group">
+            <label for="">Diện tích</label>
+            <span class="form-control">{{dientich}}</span>
+        </div>
+        <div class="form-group">
+            <span class="btn btn-warning" ng-click="tinhtoan();">Tính toán</span>
+        </div>
+    </form>
+    </div>
+
+    <script>
+        app = angular.module("b2", []);
+        app.controller("hienthi", xuly);
+        function xuly($scope) {
+            $scope.tinhtoan = function () {
+                var d = parseFloat($scope.dai);
+                var r = parseFloat($scope.rong);
+                $scope.chuvi = (d + r) * 2;
+                $scope.dientich = d * r;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+    <link rel="stylesheet" href="../CSS/bai3.css">
+    <script src="../javascipt/bai3.js"></script>
+
+</head>
+
+<body>
+    <audio src="../hinh/nen_hay_khong_hoc_da_i_ho_c_phong_van_tay_va_ta_1677379 (mp3cut.net).mp3" autoplay loop></audio>
+    <div class="x">
+        <h1>Bán Hàng</h1>
+        <div class="y">
+            <select id="mucgia" onchange="doimucgia()">
+                <option>Mức giá</option><br>
+                <p></p>
+                <option value="200">Từ 0 đén 200</option>
+                <option value="400">Từ 200 đến 400</option>
+                <option value="600">Từ 400 từ 600</option>
+                <option value="800">Từ 600 từ 800</option>
+            </select>
+            <p></p>
+        </div>
+        <form action="">
+            <table border="1">
+                <tr rowspan="">
+                    <th colspan="2">Hàng Hóa </th>
+                    <th rowspan="1">Đơn Giá</th>
+                    <th rowspan="1">Số Lượng</th>
+                    <th rowspan="1">Thành tiền</th>
+                <tr>
+                    <th><input type="checkbox" onclick="check(0)" name="chon"></th>
+                    <th>Iphone 9</th>
+                    <td><span name="gia"  >700</span></td>
+                    <td><input type="number" name="soluong" onkeyup="tongtien()" onkeyup="thanhtien(0)" disabled onchange="tongtien(),thanhtien(0)"></td>
+                    <td id="thanhtien0">0</td>
+
+                </tr>
+                <tr>
+                    <th><input type="checkbox" onclick="check(1)" name="chon" ></th>
+                    <th>Samsung</th>
+                    <td><span name="gia" >400</span></td>
+                    <td><input type="number" name="soluong" onkeyup="tongtien()"onkeyup="thanhtien(1)" disabled onchange="tongtien(),thanhtien(1)"></td>
+                    <td id="thanhtien1">0</td>
+
+
+                </tr>
+                <tr>
+                    <th><input type="checkbox" onclick="check(2)"name="chon"></th>
+                    <th>Nokia</th>
+                    <td><span name="gia" >100</span></td>
+                    <td><input type="number" name="soluong" onkeyup="tongtien()" onkeyup="thanhtien(2)" disabled onchange="tongtien(),thanhtien(2)"></td>
+                    <td id="thanhtien2">0</td>
+
+
+                </tr>
+                <tr>
+                    <th><input type="checkbox" onclick="check(3)"name="chon"></th>
+                    <th>Sony Xperia</th>
+                    <td><span name="gia">450</span></td>
+                    <td><input type="number" name="soluong" onkeyup="tongtien()" onkeyup="thanhtien(3)" disabled onchange="tongtien(),thanhtien(3)"></td>
+                    <td id="thanhtien3">0</td>
+
+
+                </tr>
+                <tr>
+                    <th><input type="checkbox" onclick="check(4)"name="chon"></th>
+                    <th>Motorola</th>
+                    <td><span name="gia">180</span></td>
+                    <td><input type="number" name="soluong" onkeyup="tongtien()" onkeyup="thanhtien(4)" disabled onchange="tongtien(),thanhtien(4)"></td>
+                    <td id="thanhtien4">0</td>
+
+
+                </tr>
+                <tr>
+                    <th><input type="checkbox" onclick="check(5)" name="chon"></th>
+                    <th>Oppo</th>
+                    <td><span name="gia" >600</span></td>
+                    <td><input type="number" name="soluong" onkeyup="tongtien()" onkeyup="thanhtien(5)" disabled onchange="tongtien(),thanhtien(5)"></td>
+                    <td id="thanhtien5">0</td>
+
+                </tr>
+                <tr>
+                    <th><input type="checkbox" onclick="check(6)"name="chon"></th>
+                    <th>Bphone</th>
+                    <td><span name="gia">90</span></td>
+                    <td><input type="number" name="soluong" onkeyup="tongtien()" onkeyup="thanhtien(6)" disabled onchange="tongtien(),thanhtien(6)" ></td>
+                    <td  id="thanhtien6">0</td>
+
+                </tr>
+                <tr >
+                    <th colspan="6"><h2>Tổng số tiền :<span id="tinhtong"></span></h2> </th>
+                </tr>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+
+</html>

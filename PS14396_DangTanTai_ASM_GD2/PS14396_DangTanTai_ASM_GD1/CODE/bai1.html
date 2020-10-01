@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+    <link rel="stylesheet" href="/PS14396_DangTanTai_ASM_GD1/CSS/bai1.css">
+    <script src="../javascipt/bai1.js"></script>
+    <script>
+        var ptb2 = new Object();
+        ptb2.a = null;
+        ptb2.b = null;
+        ptb2.c = null;
+        var count = 0;
+        ptb2.nhap = function () {
+            ptb2.a = parseInt(Math.random() * 10);
+            ptb2.b = parseInt(Math.random() * 10);
+            ptb2.c = parseInt(Math.random() * 10);
+            document.getElementById("a").value = ptb2.a;
+            document.getElementById("b").value = ptb2.b;
+            document.getElementById("c").value = ptb2.c;
+            document.getElementById("khoa").disabled = false;
+
+        }
+        ptb2.nhapa = function () {
+            this.a = getElementById("a").value;
+        }
+        ptb2.nhapb = function () {
+            this.b = getElementById("b").value;
+
+
+        }
+        ptb2.nhapc = function () {
+            this.c = getElementById("c").value;
+
+
+        }
+        ptb2.giai = function () {
+            document.getElementById("count").innerHTML = count;
+            this.a = document.getElementById("a").value;
+            this.b = document.getElementById("b").value;
+            this.c = document.getElementById("c").value;
+            if ((this.a == "") == true || (this.b == "") == true ||
+                (this.c == "") == true) {
+                alert("Thiếu tìm thấy giá trị!\nCác giá trị sẽ được thêm ngẫu nhiên");
+                ptb2.nhap();
+            }
+            if ((this.a < 0) == true || (this.a > 10) == true ||
+                (this.b < 0) == true || (this.b > 10) == true ||
+                (this.c < 0) == true || (this.c > 10) == true) {
+                alert("Xin hãy chỉ nhập từ 0-10!\nTuy nhiên,phép toán của bạn vẫn được thực thi :)))");
+            }
+            if (this.a == 0) if (this.b == 0) if (this.c == 0) {
+                var str = this.c + " = 0";
+                document.getElementById("ptr").innerHTML = str;
+                document.getElementById("id").innerHTML = "Phương trình luôn đúng";
+            } else {
+                var str = this.c + " = 0";
+                document.getElementById("ptr").innerHTML = str;
+                document.getElementById("id").innerHTML = "Phương trình vô lí";
+            } else {
+                var str = this.b + "x + " + this.c + " = 0";
+                document.getElementById("ptr").innerHTML = str;
+                var x = -this.c / this.b;
+                document.getElementById("id").innerHTML = "Phương trình có 1 nghiệm: x= " + x.toFixed(2);
+            }
+            else {
+                var str = this.a + "x<sup>2</sup> + " + this.b + "x + " + this.c + " = 0";
+                document.getElementById("ptr").innerHTML = str;
+                var delta = this.b * this.b - 4 * this.a * this.c;
+                if (delta < 0) {
+                    document.getElementById("id").innerHTML = "Phương trình vô nghiệm";
+                } else if (delta == 0) {
+                    xk = -this.b / 2 * this.a;
+                    document.getElementById("id").innerHTML = "Phương trình có nghiệm kép: x<sub>1</sub>=x<sub>2</sub>= " + xk.toFixed(2);
+                }
+                else {
+                    x1 = -this.b + Math.sqrt(delta) / 2 * this.a;
+                    x2 = -this.b - Math.sqrt(delta) / 2 * this.a;
+                    document.getElementById("id").innerHTML = "Phương trình có 2 nghiệm phân biệt: <br>x<sub>1</sub>= " + x1.toFixed(2) + "<br>x<sub>2</sub>= " + x2.toFixed(2);
+                }
+            }
+            document.getElementById("khoa").disabled = true;
+        }
+    </script>
+    <script>
+        function unlock() {
+            document.getElementById("khoa").disabled = false;
+        }
+    </script>
+</head>
+
+<body background="bai1.html">
+    <div class="x">
+        <div id="gachNgang">
+            <h1>Giải phương trình bậc 2 <div id="ptr"></div>
+            </h1>
+            <h2>Số lần giải : <span id="count"></span>
+            </h2>
+
+        </div>
+        <div class="main">
+            <form action="">
+                <div class="x1">
+                    <span>Nhập số a : </span>
+                    <input type="number" name="so" id="a" onchange="ptb2.nhapa()" onkeydown="unlock();">
+                </div>
+                <div class="x1">
+                    <span>Nhập số b : </span>
+                    <input type="number" name="so" id="b" onchange="ptb2.nhapb()" onkeydown="unlock();">
+                </div>
+                <div class="x1">
+                    <span>Nhập số c : </span>
+                    <input type="number" name="so" id="c" onchange="ptb2.nhapc()" onkeydown="unlock();">
+                </div>
+            </form>
+        </div>
+        <button onclick="ptb2.giai();count++" id="khoa">Giải PT</button>
+        <button onclick="ptb2.nhap();">Cho Số</button>
+        <div class="hangCuoi">
+
+            <div id="id"></div>
+        </div>
+        <h3>Bây giờ là : <span id="t"></span>
+        </h3>
+    </div>
+</body>
+
+</html>

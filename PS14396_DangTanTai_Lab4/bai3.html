@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    #dongho {
+        background-color: white;
+    }
+
+    .container {
+        width: 300px;
+        height: 100px;
+        margin: auto;
+        border: 1px solid darkgrey
+    }
+
+    header {
+        background: darkolivegreen;
+        height: 100px;
+        position: relative;
+    }
+
+    main {
+        background: darkseagreen;
+        min-height: 100px;
+    }
+
+    footer {
+        background: darkslategray;
+        height: 0px;
+    }
+
+    button {
+        margin-top: 30px;
+    }
+
+    span {
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header>
+            <span id="dongho">Đồng hồ</span>
+            <br>
+            <button onclick="start();">Ngừng Chạy</button>
+        </header>
+        <main>
+            <button onclick="location.reload();">Nạp lại</button>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+<script>
+    var dh = null;
+    
+    function tg() {
+        var now = new Date();
+        var h = now.getHours();
+        var m = now.getMinutes();
+        var s = now.getSeconds();
+        document.getElementById("dongho").innerHTML = h + ":" + m + ":" + s;
+    }
+    function start() {
+        if (dh == null) dh = setInterval("tg()", 1000);
+        else {
+            clearInterval(dh);
+            dh = null;
+        }
+    }
+</script>
+<script>
+    dh = setInterval("tg()", 1000);
+    setTimeout("alert('Chào bạn mình tên tài ')", 1000);
+</script>
+
+</html>

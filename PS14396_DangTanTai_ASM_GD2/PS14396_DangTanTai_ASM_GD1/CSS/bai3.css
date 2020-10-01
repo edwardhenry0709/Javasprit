@@ -1,0 +1,78 @@
+*{margin: auto;}
+.x
+{
+text-align: center;
+color: white;
+}
+body
+{
+    background-image: url(../hinh/banner.jpg);
+    transition: ease 3s;
+}
+select
+{
+    color: black;
+    background-color: aqua;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+}
+th
+{
+    font-size: 30px;
+    transition: ease-in-out 3s;
+}
+input
+{
+    width:100px ;
+    height: 30px;
+    transition: ease-in-out 3s;
+}
+td
+{
+    font-weight: bold;
+    font-size: 30px;
+    transition: ease-in-out 3s;
+}
+table
+{
+    background-image: url(../hinh/content.jpg);
+    border: white;
+    transition: ease-in-out;
+    color: azure;
+    width: 900px;
+}
+table:hover
+{
+    transition: ease 2s;
+    width: 800px;
+}
+table:checked
+{
+    transition: ease 2s;
+    width: 900px;
+}
+input:default
+{
+opacity: 10%;
+}
+input:hover
+{
+    opacity: -0.2%;
+}
+
+#run
+{
+    color: wheat;
+    font-size: 90px;
+    box-shadow: 3px 3px 3px orange;
+}
+
+h1
+{
+    font-size: 80px;
+}
+h1:hover
+{
+    transition-property: inherit;
+}

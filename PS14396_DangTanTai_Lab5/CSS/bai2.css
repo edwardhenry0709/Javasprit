@@ -1,0 +1,5 @@
+*{margin: auto;}
+.x{width: 600px; margin: auto; background: darkkhaki; padding: 20px; font-size: 1.2em;}
+table{width: 100%; border-collapse: collapse;}
+th,td{border: 1px solid black; font-size: 1.2em;}
+button{width: 60px; height: 25px;}

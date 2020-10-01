@@ -1,0 +1,12 @@
+.X
+{
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    padding: auto;
+    border: 3px red;
+    border-radius: 10px;
+    background-color: pink;
+    text-align: center;
+    display: inline-block;
+}

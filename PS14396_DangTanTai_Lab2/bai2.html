@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 1140px;
+        margin: auto;
+        border: 1px solid darkgrey
+    }
+
+    header {
+        background: black;
+        color: white;
+        height: 120px;
+        font-size: 30px;
+        text-align: center;
+        position: relative;
+        margin: auto;
+    }
+
+    main {
+        background: white;
+        color: black;
+        max-height: 400px;
+    }
+
+    footer {
+        background: wheat;
+        height: 100px;
+        text-align: center;
+    }
+
+    #chao {
+        color: deeppink;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+    }
+
+    strong {
+        font-size: 30px;
+        text-align: center;
+        color: red;
+        text-transform: initial;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header>
+            <div id="chao">
+                <script>
+                    var n = new Date();
+                    var gio = n.getHours();
+                    if (gio < 12) document.writeln("Chào buổi sáng!");
+                    else if (gio > 12 && gio < 6) document.writeln("Chào buổi chiều");
+                    else document.writeln("Chào buổi tối")
+                </script>
+            </div>
+        </header>
+        <main><strong>Javascript là gì</strong><br>
+            16/03/2020
+            Javascript là một ngôn ngữ lập trình chạy ở trình duyệt. Javascript dùng để tạo ra các hiệu ứng, tạo ra các
+            tương tác với người dùng
+
+            A. JAVASCRIPT LÀ GÌ?
+            HTML: Nội dung
+            CSS: Cách trình bày
+            JavaScript: Hành động
+            js1
+            => JavaScript hồi đáp lại các tương tác của người dùng. Ví dụ:
+
+            Khi người dùng nhắp chuột vào 1 nút hay khi nhắp vào 1 mục menu
+            Trong trang chủ http://Zing.vn, nhắp vào Giới thiệu , Liên hệ ở dưới cùng
+            Trong trang https://longnv.name.vn, nhắp vào nhiệt độ trên cùng.</main>
+        <footer>
+            Tài Handsome <br>
+            Email : Tantaiappdeveloper@gmail.com
+        </footer>
+    </div>
+
+</body>
+
+</html>

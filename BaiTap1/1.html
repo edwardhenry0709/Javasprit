@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var a=prompt("Write number a : ");
+        var b=prompt("Write number b : ");
+        var c=prompt("Write number c : ");
+        var delta=Math.pow(b,2)-4*a*c;
+        if(a==0)
+        {
+            if(b==0 && c!=0)
+            {
+                document.getElementById("result").innerHTML="Caculator error";
+            }
+             if(b==0 && c==0)
+            {
+                document.getElementById("result").innerHTML="Don't have any solution"
+            }
+        }
+        if(a!=0)
+        {
+            if(b==0 && c==0)
+            {
+                document.getElementById("result").innerHTML="Solution has only X=0"
+            }
+
+        }
+    </script>
+</body>
+</html>
